@@ -101,8 +101,9 @@ textarea {
 .navbar-default .navbar-nav>li>a:hover {color: #c9c786}
 .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {background: #c9c786;}
 .dropdown-menu {background: #c9c786}
-
-
+.panel-item {border: 1px solid #ddd; border-radius: 0;}
+.panel-checkout {border: 1px solid #ddd}
+.panel-checkout .panel-heading {background: #666f11; color: white;}
 
 
 
