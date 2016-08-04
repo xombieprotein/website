@@ -41,6 +41,7 @@
 	        </div><!-- /.navbar-collapse -->
 	      </div><!-- /.container-fluid -->
 	    </nav>
+			@yield('header')
 	    <div class="container-fluid">
 			@yield('content')
 		</div>

@@ -9,7 +9,7 @@
 @section('content')
 	
 	<div class="row">
-			    <div class="col-sm-4 col-sm-push-8">
+			    <div class="col-md-4 col-md-push-8">
 				    <div class="panel panel-checkout">
 					    <div class="panel-heading">
 						    <h4 class="text-center">Shopping Cart</h4>
@@ -26,7 +26,7 @@
 					    </div>
 				    </div>
 			    </div>
-			    <div class="col-sm-8 col-sm-pull-4">
+			    <div class="col-md-8 col-md-pull-4">
 				    <nav class="navbar navbar-inverse">
 					    <div class="container-fluid">
 							<ul class="nav navbar-nav navbar-right">

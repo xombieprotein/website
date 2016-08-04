@@ -6,8 +6,7 @@
 	
 @endsection
 
-
-@section('content')
+@section('header')
 
 	<div class="jumbotron" id="hero">
 		<div class="container">
@@ -25,5 +24,9 @@
 			</div>
 		</div>
 	</div>
+
+@endsection
+@section('content')
+
 	
 @endsection
