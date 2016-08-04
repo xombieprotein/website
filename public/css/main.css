@@ -1,0 +1,7 @@
+body {background: #AEB0AE;}
+.navbar-inverse {background: #333; border: none;}
+#hero {background-image: url(../img/muscle-1.jpg);
+max-height: 100%;
+background-size: cover;
+color: white;
+border-radius: 0;}
