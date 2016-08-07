@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('layouts.layout')
 
 @section('title')
 	
@@ -6,12 +6,16 @@
 	
 @endsection
 
+@section('description')
+		Xombie Protein
+@endsection
+
 @section('header')
 
 	<div class="jumbotron" id="hero">
-		<div class="container">
+		<div class="container-fluid">
 			<div class="row">
-				<div class="col-xs-8">
+				<div class="col-xs-8 col-sm-push-2 col-sm-3">
 					<h1 class="text-uppercase">Xombie Protein</h1>
 					<p class="lead">
 						This is where you put a stirring message
@@ -19,7 +23,7 @@
 						Make a call to to action after this to get
 						people to spend their money on your business.
 					</p>
-					<p><a class="btn btn-success btn-lg" href="shop">Shop Now</a></p>
+					<p><a class="btn btn-success btn-lg" href="{{ url('shop') }}">Shop Now</a></p>
 				</div>
 			</div>
 		</div>
@@ -27,6 +31,8 @@
 
 @endsection
 @section('content')
+<div class="row">
+	<div class="col-sm-10 col-sm-offset-1">
 	<h1 class="text-center text-capitalize">Get ripped, get lean or get bulked.</h1>
 	<h2 class="text-center"><small>Our No. 1 Sellers from the store.</small></h2>
 	<hr>
@@ -34,17 +40,17 @@
 		<div class="col-sm-4 col-md-4">
 			<img src="img/protein.png" class="img-responsive center-block">
 			<h3>Chocolate</h3>
-			<p><a class="btn btn-success" href="shop.html">Shop Now</a></p>
+			<p><a class="btn btn-success" href="{{ url('shop') }}">Shop Now</a></p>
 		</div>
 		<div class="col-sm-4 col-md-4">
 			<img src="img/protein.png" class="img-responsive center-block">
 			<h3>Strawberry</h3>
-			<p><a class="btn btn-success" href="shop.html">Shop Now</a></p>
+			<p><a class="btn btn-success" href="{{ url('shop') }}">Shop Now</a></p>
 		</div>
 		<div class="col-sm-4 col-md-4">
 			<img src="img/protein.png" class="img-responsive center-block">
 			<h3>Banana</h3>
-			<p><a class="btn btn-success" href="shop.html">Shop Now</a></p>
+			<p><a class="btn btn-success" href="{{ url('shop') }}">Shop Now</a></p>
 		</div>
 	</div>
 	<div class="panel panel-item" id="block">
@@ -94,6 +100,8 @@
 	    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
 	    </div>
 	</form>
+	</div>
+	</div>
 	</div>
 	<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
 	<!--End mc_embed_signup-->

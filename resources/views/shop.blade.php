@@ -1,15 +1,16 @@
-@extends('layout')
+@extends('layouts.layout')
 
 @section('title')
-	
 		Shop Xombie
-	
+@endsection
+@section('description')
+		Xombie Protein
 @endsection
 
 @section('content')
 	
 	<div class="row">
-			    <div class="col-md-4 col-md-push-8">
+			    <div class="col-md-4 col-md-push-8 col-lg-2 col-lg-push-8">
 				    <div class="panel panel-checkout">
 					    <div class="panel-heading">
 						    <h4 class="text-center">Shopping Cart</h4>
@@ -26,7 +27,7 @@
 					    </div>
 				    </div>
 			    </div>
-			    <div class="col-md-8 col-md-pull-4">
+			    <div class="col-md-8 col-md-pull-4 col-lg-6 col-lg-pull-0">
 				    <nav class="navbar navbar-inverse">
 					    <div class="container-fluid">
 							<ul class="nav navbar-nav navbar-right">
@@ -45,6 +46,7 @@
 					    </div>
 				    </nav>
 			    	<div class="row">
+			    		
 			    		<div class="col-sm-4 col-md-4">
 				    		<div class="panel panel-item">
 								<img src="img/protein.png" class="img-responsive center-block">
@@ -60,6 +62,7 @@
 					    		</div>
 				    		</div>
 			    		</div>
+			    		
 			    		<div class="col-sm-4 col-md-4">
 				    		<div class="panel panel-item">
 								<img src="img/protein.png" class="img-responsive center-block">
