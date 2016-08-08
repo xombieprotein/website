@@ -1,4 +1,4 @@
-body {background: #65625f;}
-.navbar-inverse {background: #333; border: none;}
+body {background: #252830;}
+.navbar-inverse {background: #39393d; border: none;}
 #hero {background-image: url(../img/muscle-1.jpg); background-position: 40% 0; max-height: 100%; background-size: cover; color: white; border-radius: 0; margin-top: -20px; padding: 17% 0;}
 .panel-item, .panel-checkout {border-radius: 0;}
