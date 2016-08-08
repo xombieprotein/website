@@ -23,6 +23,11 @@ class PagesController extends Controller
 	public function shop()
 	{
 		
-		return view('shop');
+		return view('shop.index');
+	}
+	
+	public function profile()
+	{
+		return view('user.profile');
 	}
 }
