@@ -1,10 +1,10 @@
 @extends('layouts.layout')
 
 @section('title')
-		Shop Xombie
+		Shop Xombie Products
 @endsection
 @section('description')
-		Xombie Protein
+		Xombie Protein web store
 @endsection
 
 @section('content')
@@ -56,9 +56,10 @@
 						    		<p class="lead">
 								    	Product Description Goes Here
 							    	</p>
-						    		<p class="text-right">
-							    		<a class="btn btn-success" id="cartBtn" href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Add To Cart</a>
-						    		</p>
+							    	<div class="clearfix">
+								    	<a class="btn btn-default"><strong>$45</strong></a>
+								    	<a class="btn btn-success pull-right" id="cartBtn" href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Add To Cart</a>
+							    	</div>
 					    		</div>
 				    		</div>
 			    		</div>
@@ -72,9 +73,10 @@
 						    		<p class="lead">
 								    	Product Description Goes Here
 							    	</p>
-						    		<p class="text-right">
-							    		<a class="btn btn-success" id="cartBtn" href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Add To Cart</a>
-						    		</p>
+						    		<div class="clearfix">
+								    	<a class="btn btn-default"><strong>$45</strong></a>
+								    	<a class="btn btn-success pull-right" id="cartBtn" href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Add To Cart</a>
+							    	</div>
 					    		</div>
 				    		</div>
 			    		</div>
@@ -87,9 +89,10 @@
 						    		<p class="lead">
 								    	Product Description Goes Here
 							    	</p>
-						    		<p class="text-right">
-							    		<a class="btn btn-success" id="cartBtn" href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Add To Cart</a>
-						    		</p>
+						    		<div class="clearfix">
+								    	<a class="btn btn-default"><strong>$45</strong></a>
+								    	<a class="btn btn-success pull-right" id="cartBtn" href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Add To Cart</a>
+							    	</div>
 					    		</div>
 				    		</div>
 			    		</div>
@@ -102,9 +105,10 @@
 						    		<p class="lead">
 								    	Product Description Goes Here
 							    	</p>
-						    		<p class="text-right">
-							    		<a class="btn btn-success" id="cartBtn" href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Add To Cart</a>
-						    		</p>
+						    		<div class="clearfix">
+								    	<a class="btn btn-default"><strong>$45</strong></a>
+								    	<a class="btn btn-success pull-right" id="cartBtn" href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Add To Cart</a>
+							    	</div>
 					    		</div>
 				    		</div>
 			    		</div>
@@ -117,9 +121,10 @@
 						    		<p class="lead">
 								    	Product Description Goes Here
 							    	</p>
-						    		<p class="text-right">
-							    		<a class="btn btn-success" id="cartBtn" href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Add To Cart</a>
-						    		</p>
+						    		<div class="clearfix">
+								    	<a class="btn btn-default"><strong>$45</strong></a>
+								    	<a class="btn btn-success pull-right" id="cartBtn" href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Add To Cart</a>
+							    	</div>
 					    		</div>
 				    		</div>
 			    		</div>
@@ -132,9 +137,10 @@
 						    		<p class="lead">
 								    	Product Description Goes Here
 							    	</p>
-						    		<p class="text-right">
-							    		<a class="btn btn-success" id="cartBtn" href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Add To Cart</a>
-						    		</p>
+						    		<div class="clearfix">
+								    	<a class="btn btn-default"><strong>$45</strong></a>
+								    	<a class="btn btn-success pull-right" id="cartBtn" href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Add To Cart</a>
+							    	</div>
 					    		</div>
 				    		</div>
 			    		</div>
@@ -152,9 +158,10 @@
 									    	<p class="lead">
 										    	Product Description Goes Here
 									    	</p>
-									    	<p class="text-left">
-									    		<a class="btn btn-success" id="cartBtn" href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Add To Cart</a>
-								    		</p>
+									    	<div class="clearfix">
+								    	<a class="btn btn-default"><strong>$45</strong></a>
+								    	<a class="btn btn-success" id="cartBtn" href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Add To Cart</a>
+							    	</div>
 								    	</div>
 							    	</div>
 						    	</div>

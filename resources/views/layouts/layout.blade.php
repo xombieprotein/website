@@ -39,6 +39,7 @@
                             </a>
 
                             <ul class="dropdown-menu" role="menu">
+	                            <li><a href="{{ url('/profile') }}"><span class="glyphicon glyphicon-dashboard"></span> Dashboard</a></li>
                                 <li><a href="{{ url('/logout') }}"><i class="glyphicon glyphicon-log-out"></i> Logout</a></li>
                             </ul>
                         </li>
