@@ -10,9 +10,7 @@ class PagesController extends Controller
 {
 	public function home()
 	{
-		$people = ['Alex', 'Clinton', 'Kenny', 'Matt', 'Sophie'];
-    
-		return view('welcome', compact('people'));
+		return view('welcome');
 	}
 	
 	public function about()
