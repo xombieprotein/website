@@ -43,7 +43,7 @@
                                 <li><a href="{{ url('/logout') }}"><i class="glyphicon glyphicon-log-out"></i> Logout</a></li>
                             </ul>
                         </li>
-                    @endif
+                 @endif
 	          </ul>
 	        </div><!-- /.navbar-collapse -->
 	      </div><!-- /.container-fluid -->

@@ -8,5 +8,8 @@ use App\Http\Requests;
 
 class ProductController extends Controller
 {
-    //
+    public function getIndex()
+    {
+    	return view('shop.index');
+    }
 }
