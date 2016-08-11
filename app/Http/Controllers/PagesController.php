@@ -18,12 +18,6 @@ class PagesController extends Controller
 		return view('about');
 	}
 	
-	public function shop()
-	{
-		
-		return view('shop.index');
-	}
-	
 	public function profile()
 	{
 		return view('user.profile');

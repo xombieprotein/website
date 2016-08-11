@@ -10,7 +10,7 @@
 @section('content')
 	
 	<div class="row">
-			    <div class="col-md-4 col-md-push-8 col-lg-2 col-lg-push-8">
+			    <div class="col-md-3 col-md-push-9 col-lg-2 col-lg-push-8">
 				    <div class="panel panel-checkout">
 					    <div class="panel-heading">
 						    <h4 class="text-center">Shopping Cart</h4>
@@ -27,7 +27,7 @@
 					    </div>
 				    </div>
 			    </div>
-			    <div class="col-md-8 col-md-pull-4 col-lg-6 col-lg-pull-0">
+			    <div class="col-md-9 col-md-pull-3 col-lg-7 col-lg-pull-1">
 				    <nav class="navbar navbar-inverse">
 					    <div class="container-fluid">
 							<ul class="nav navbar-nav navbar-right">
@@ -45,129 +45,29 @@
 							</ul>
 					    </div>
 				    </nav>
+				    @foreach ($products->chunk(3) as $productChunk)
 			    	<div class="row">
-			    		
-			    		<div class="col-sm-4 col-md-4">
-				    		<div class="panel panel-item">
-								<img src="img/protein.png" class="img-responsive center-block">
-								<hr>
-					    		<h4 class="text-center">Mega Bucket</h4>
-					    		<div class="panel-body">
-						    		<p class="lead">
-								    	Product Description Goes Here
-							    	</p>
-							    	<div class="clearfix">
-								    	<a class="btn btn-default"><strong>$45</strong></a>
-								    	<a class="btn btn-success pull-right" id="cartBtn" href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Add To Cart</a>
-							    	</div>
-					    		</div>
-				    		</div>
-			    		</div>
-			    		
-			    		<div class="col-sm-4 col-md-4">
-				    		<div class="panel panel-item">
-								<img src="img/protein.png" class="img-responsive center-block">
-								<hr>
-					    		<h4 class="text-center">Mega Bucket</h4>
-					    		<div class="panel-body">
-						    		<p class="lead">
-								    	Product Description Goes Here
-							    	</p>
-						    		<div class="clearfix">
-								    	<a class="btn btn-default"><strong>$45</strong></a>
-								    	<a class="btn btn-success pull-right" id="cartBtn" href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Add To Cart</a>
-							    	</div>
-					    		</div>
-				    		</div>
-			    		</div>
-			    		<div class="col-sm-4 col-md-4">
-				    		<div class="panel panel-item">
-								<img src="img/protein.png" class="img-responsive center-block">
-								<hr>
-								<h4 class="text-center">Mega Bucket</h4>
-					    		<div class="panel-body">
-						    		<p class="lead">
-								    	Product Description Goes Here
-							    	</p>
-						    		<div class="clearfix">
-								    	<a class="btn btn-default"><strong>$45</strong></a>
-								    	<a class="btn btn-success pull-right" id="cartBtn" href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Add To Cart</a>
-							    	</div>
-					    		</div>
-				    		</div>
-			    		</div>
-			    		<div class="col-sm-4 col-md-4">
-				    		<div class="panel panel-item">
-								<img src="img/protein.png" class="img-responsive center-block">
-								<hr>
-					    		<h4 class="text-center">Mega Bucket</h4>
-					    		<div class="panel-body">
-						    		<p class="lead">
-								    	Product Description Goes Here
-							    	</p>
-						    		<div class="clearfix">
-								    	<a class="btn btn-default"><strong>$45</strong></a>
-								    	<a class="btn btn-success pull-right" id="cartBtn" href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Add To Cart</a>
-							    	</div>
-					    		</div>
-				    		</div>
-			    		</div>
-			    		<div class="col-sm-4 col-md-4">
-				    		<div class="panel panel-item">
-								<img src="img/protein.png" class="img-responsive center-block">
-								<hr>
-					    		<h4 class="text-center">Mega Bucket</h4>
-					    		<div class="panel-body">
-						    		<p class="lead">
-								    	Product Description Goes Here
-							    	</p>
-						    		<div class="clearfix">
-								    	<a class="btn btn-default"><strong>$45</strong></a>
-								    	<a class="btn btn-success pull-right" id="cartBtn" href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Add To Cart</a>
-							    	</div>
-					    		</div>
-				    		</div>
-			    		</div>
-			    		<div class="col-sm-4 col-md-4">
-				    		<div class="panel panel-item">
-								<img src="img/protein.png" class="img-responsive center-block">
-								<hr>
-					    		<h4 class="text-center">Mega Bucket</h4>
-					    		<div class="panel-body">
-						    		<p class="lead">
-								    	Product Description Goes Here
-							    	</p>
-						    		<div class="clearfix">
-								    	<a class="btn btn-default"><strong>$45</strong></a>
-								    	<a class="btn btn-success pull-right" id="cartBtn" href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Add To Cart</a>
-							    	</div>
-					    		</div>
-				    		</div>
-			    		</div>
-			    	</div>
-			    	<div class="row">
-				    	<div class="col-sm-12">
-					    	<div class="panel panel-item">
-						    	<div class="panel-body">
-							    	<div class="row">
-								    	<div class="col-xs-4">
-									    	<img src="img/protein.png" class="img-responsive center-block">
+			    		@foreach ($productChunk as $product)
+				    		<div class="col-sm-4 col-md-4">
+					    		<div class="panel panel-item">
+									<img src="{{ $product->imagePath }}" class="img-responsive center-block">
+						    		<h4 class="text-center">
+							    		{{{ $product->productName }}}
+						    		</h4>
+						    		<div class="panel-body">
+							    		<p class="lead" id="productDescription">
+									    	{{{ $product->productDescription }}}
+								    	</p>
+								    	<div class="clearfix">
+									    	<a class="btn btn-default"><strong>${{ $product->productPrice }}</strong></a>
+									    	<a class="btn btn-success pull-right" id="cartBtn" href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Add To Cart</a>
 								    	</div>
-								    	<div class="col-xs-8">
-									    	<h4>Mega Bucket</h4>
-									    	<p class="lead">
-										    	Product Description Goes Here
-									    	</p>
-									    	<div class="clearfix">
-								    	<a class="btn btn-default"><strong>$45</strong></a>
-								    	<a class="btn btn-success" id="cartBtn" href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Add To Cart</a>
-							    	</div>
-								    	</div>
-							    	</div>
-						    	</div>
-					    	</div>
-				    	</div>
+						    		</div>
+					    		</div>
+				    		</div>
+			    		@endforeach
 			    	</div>
+			    	@endforeach
 		    	</div>
 	    	</div>
 	
