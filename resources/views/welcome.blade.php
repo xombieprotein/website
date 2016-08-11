@@ -43,7 +43,7 @@
 			<h2 class="text-center">Chocolate</h2>
 		</div>
 		<div class="col-sm-6" id="xpImg-2">
-			<h2 class="text-center">Vanilla</h2>
+			<h2 class="text-center">Banana</h2>
 		</div>
 	</div>
 @endsection

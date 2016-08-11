@@ -16,6 +16,10 @@
 						    <h4 class="text-center">Shopping Cart</h4>
 					    </div>
 					    <ul class="list-group">
+							<li class="list-group-item">{{ (Session::has('cart') ? Session::get('cart')->totalQty : '') }}</li>
+							@if (Session::has('cart'))
+								<li class="list-group-item">Something's Here</li>
+							@endif
 						    <li class="list-group-item">Mega Bucket <span class="badge">$40</span></li>
 						    <li class="list-group-item">Mega Bucket <span class="badge">$40</span></li>
 						    <li class="list-group-item">Mega Bucket <span class="badge">$40</span></li>
@@ -48,19 +52,19 @@
 				    @foreach ($products->chunk(3) as $productChunk)
 			    	<div class="row">
 			    		@foreach ($productChunk as $product)
-				    		<div class="col-sm-4 col-md-4">
+				    		<div class="col-sm-4">
 					    		<div class="panel panel-item">
 									<img src="{{ $product->imagePath }}" class="img-responsive center-block">
 						    		<h4 class="text-center">
 							    		{{{ $product->productName }}}
 						    		</h4>
 						    		<div class="panel-body">
-							    		<p class="lead" id="productDescription">
+							    		<p id="productDescription">
 									    	{{{ $product->productDescription }}}
 								    	</p>
 								    	<div class="clearfix">
 									    	<a class="btn btn-default"><strong>${{ $product->productPrice }}</strong></a>
-									    	<a class="btn btn-success pull-right" id="cartBtn" href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Add To Cart</a>
+									    	<a class="btn btn-success pull-right" id="cartBtn" href="{{ route('product.addToCart', ['id' => $product->id]) }}"><span class="glyphicon glyphicon-shopping-cart"></span> Add To Cart</a>
 								    	</div>
 						    		</div>
 					    		</div>

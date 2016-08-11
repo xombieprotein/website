@@ -10,19 +10,27 @@
 @section('content')
 	@if (Auth::guest())
         <div class="row">
-        	<div class="col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
+        	<div class="col-sm-6 col-sm-offset-3 col-lg-4 col-lg-offset-4">
 	        	<div class="panel panel-default">
-		        	<div class="panel-heading lead text-center">Login Or Register First</div>
+		        	<div class="panel-heading text-center">Login Or Register First</div>
 		        	<div class="panel-body">
-			        	<p>
+			        	<p class="text-center lead">
+				        	It looks like you're not logged in
+			        	</p>
+			        	<p class="text-center">
 				        	In order to see your account details either log in to your
-				        	account, or register a new account to get started.
+				        	account, or register a new account if you haven't done so already.
+			        	</p>
+			        	<p class="text-center">
+				        	Choose an option below.
 			        	</p>
 		        	</div>
 		        	<div class="panel-footer">
 			        	<div class="clearfix">
-			        	<a href="{{ url('/login') }}" class="btn btn-primary btn-block pull-left"><span class="glyphicon glyphicon-log-in"></span> <strong>Log In</strong></a>
-			        	<a href="{{ url('/register') }}" class="btn btn-success btn-block pull-right"><span class="glyphicon glyphicon-user"></span> <strong>Register</strong></a>
+				        	<div class="pull-right">
+				        	<a href="{{ url('/login') }}" class="btn btn-primary"><span class="glyphicon glyphicon-log-in"></span> <strong>Log In</strong></a>
+				        	<a href="{{ url('/register') }}" class="btn btn-success"><span class="glyphicon glyphicon-user"></span> <strong>Register</strong></a>
+				        	</div>
 			        	</div>
 		        	</div>
 	        	</div>
@@ -30,7 +38,7 @@
         </div>
     @else
     	<div class="row">
-			<div class="col-sm-2">
+			<div class="col-sm-2 col-lg-2 col-lg-offset-1" id="profileNav">
 				<!-- Nav tabs -->
 				<ul class="nav nav-pills nav-stacked" role="tablist">
 					<li role="presentation" class="active"><a href="#dashboard" aria-controls="dashboard" role="tab" data-toggle="pill">Dashboard</a></li>
@@ -38,7 +46,7 @@
 					<li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="pill">Settings</a></li>
 				</ul>
 			</div>
-			<div class="col-sm-10">
+			<div class="col-sm-10 col-lg-8">
         	<!-- Tab panes -->
 			<div class="tab-content">
 				<div role="tabpanel" class="tab-pane fade in active" id="dashboard">
