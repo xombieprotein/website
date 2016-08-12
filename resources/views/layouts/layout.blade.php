@@ -27,13 +27,18 @@
 			
 	        <!-- Collect the nav links, forms, and other content for toggling -->
 	        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-	          <ul class="nav navbar-nav navbar-right">
-	            <li><a href="{{ url('shop') }}"><span class="glyphicon glyphicon-shopping-cart"></span> Shop</a></li>
-	             @if(!Auth::user())
-                        <li><a href="{{ url('/login') }}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-                        <li><a href="{{ url('/register') }}"><span class="glyphicon glyphicon-user"></span> Register</a></li>
+	        	<ul class="nav navbar-nav navbar-right">
+		        	<li>
+		        		<a href="{{ route('product.shoppingCart') }}"><span class="glyphicon glyphicon-shopping-cart"></span>
+			        		Cart <span class="badge">{{ (Session::has('cart') ? Session::get('cart')->totalQty : '') }}</span>
+		        		</a>
+	        		</li>
+					<li><a href="{{ url('shop') }}"><span class="glyphicon glyphicon-usd"></span> Shop</a></li>
+					@if(!Auth::user())
+                    	<li><a href="{{ url('/login') }}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+						<li><a href="{{ url('/register') }}"><span class="glyphicon glyphicon-user"></span> Register</a></li>
                     @else
-                         <li class="dropdown">
+                    	<li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                 <span class="glyphicon glyphicon-user"></span> {{ Auth::user()->name }} <span class="caret"></span>
                             </a>
@@ -54,5 +59,6 @@
 		</div>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		@yield('scripts')
 	</body>
 </html>

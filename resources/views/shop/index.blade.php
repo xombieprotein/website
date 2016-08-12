@@ -16,18 +16,17 @@
 						    <h4 class="text-center">Shopping Cart</h4>
 					    </div>
 					    <ul class="list-group">
-							<li class="list-group-item">{{ (Session::has('cart') ? Session::get('cart')->totalQty : '') }}</li>
 							@if (Session::has('cart'))
-								<li class="list-group-item">Something's Here</li>
+								@foreach ($products as $product)
+									<li class="list-group-item">
+										{{{ $product->productName }}}
+									</li>
+								@endforeach
+								<li class="list-group-item list-group-item-success">Total <span class="pull-right"><strong >${{ Session::get('cart')->totalPrice }}</strong></span></li>
 							@endif
-						    <li class="list-group-item">Mega Bucket <span class="badge">$40</span></li>
-						    <li class="list-group-item">Mega Bucket <span class="badge">$40</span></li>
-						    <li class="list-group-item">Mega Bucket <span class="badge">$40</span></li>
-						    <li class="list-group-item">Mega Bucket <span class="badge">$40</span></li>
-						    <li class="list-group-item list-group-item-success">Total <span class="badge">$160</span></li>
 					    </ul>
 					    <div class="panel-footer">
-							<button type="button" class="btn btn-success btn-block"><i class="glyphicon glyphicon-shopping-cart"></i> Checkout</button>
+							<a href="{{ route('product.shoppingCart') }}" class="btn btn-success btn-block"><i class="glyphicon glyphicon-shopping-cart"></i> Checkout</a>
 					    </div>
 				    </div>
 			    </div>
@@ -63,7 +62,7 @@
 									    	{{{ $product->productDescription }}}
 								    	</p>
 								    	<div class="clearfix">
-									    	<a class="btn btn-default"><strong>${{ $product->productPrice }}</strong></a>
+									    	<a class="btn btn-default"><strong>${{ $product->price }}</strong></a>
 									    	<a class="btn btn-success pull-right" id="cartBtn" href="{{ route('product.addToCart', ['id' => $product->id]) }}"><span class="glyphicon glyphicon-shopping-cart"></span> Add To Cart</a>
 								    	</div>
 						    		</div>
