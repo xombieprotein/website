@@ -8,7 +8,15 @@
 @endsection
 
 @section('content')
-	
+	@if(Session::has('success'))
+	<div class="row">
+		<div class="col-sm-6 col-md-4 col-sm-offset-3 col-md-offset-4">
+			<div id="charge-message" class="alert alert-success">
+				{{ Session::get('success') }}
+			</div>
+		</div>
+	</div>
+	@endif
 	<div class="row">
 			    <div class="col-md-3 col-md-push-9 col-lg-2 col-lg-push-8">
 				    <div class="panel panel-checkout">
