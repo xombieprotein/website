@@ -22,7 +22,7 @@ function stripeResponseHandler(status, response) {
 		$form.find('button').prop('disabled', false);
 	} else {
 		var token = response.id;
-		$form.append($('<input type="hidden" name="_token" />').val(token));
+		$form.append($('<input type="hidden" name="stripeToken" />').val(token));
 
 	    // Submit the form:
 	    $form.get(0).submit();
