@@ -23,11 +23,11 @@
 	<div class="row">
 			    <div class="col-md-3 col-md-push-9 col-lg-3 col-lg-push-8">
 				    <div class="panel panel-checkout">
+					    @if (Session::has('cart'))
 					    <div class="panel-heading">
 						    <h4 class="text-center">Shopping Cart</h4>
 					    </div>
 					    <ul class="list-group">
-						    @if (Session::has('cart'))
 							@foreach ($items as $item)
 								<li class="list-group-item">
 									{{ $item['qty'] }} x {{ $item['item']['productName'] }}
@@ -35,11 +35,24 @@
 								</li>
 							@endforeach
 							<li class="list-group-item list-group-item-success">Total <span class="pull-right"><strong >${{ Session::get('cart')->totalPrice }}</strong></span></li>
-							@endif
 					    </ul>
 					    <div class="panel-footer">
 							<a href="{{ route('product.shoppingCart') }}" class="btn btn-success btn-block"><i class="glyphicon glyphicon-shopping-cart"></i> Checkout</a>
 					    </div>
+					    @else
+					    <div class="panel-heading">
+						    <h4 class="text-center">Shopping Cart <a role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample"><span class="glyphicon glyphicon-menu-down"></span></a></h4>
+					    </div>
+					    <div class="panel-body" id="collapseExample">
+						    <span id="emptyCartIcon"><i class="glyphicon glyphicon-shopping-cart text-center"></i></span>
+							<h1 class="text-center" id="emptyCart">
+								No Items in Cart
+							</h1>
+							<p class="lead text-center" id="emptyCart">
+								Add some items to your cart first.
+							</p>
+					    </div>
+					    @endif
 				    </div>
 			    </div>
 			    <div class="col-md-9 col-md-pull-3 col-lg-7 col-lg-pull-2">
