@@ -20,6 +20,8 @@ body {background: #252830;}
 #emptyCartIcon {color: #AEB0AE; display: block; text-align: center; font-size: 500%;}
 #priceLabel {margin: 1em 0; font-size: 120%;}
 #cancellation {color: #AEB0AE}
+#backButton {color: white;}
+#backButton:hover {text-decoration: none; color: #AEB0AE;}
 .panel-item, .panel-checkout {border-radius: 0;}
 .btn-success {background: #A2AD7E; border-color: #8a9a58;}
 @media (min-width: 768px) {

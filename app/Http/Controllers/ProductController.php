@@ -36,7 +36,11 @@ class ProductController extends Controller
     	$request->session()->put('cart', $cart);
     	return redirect()->action('ProductController@getIndex');
     }
-    
+    public function showItem($id)
+    {
+    	$product = Product::find($id);
+    	return view('shop.show', ['product' => $product]);
+    }
     public function getReduceItem($id)
     {
     	$oldCart = Session::has('cart') ? Session:: get('cart') : null;

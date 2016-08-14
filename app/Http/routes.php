@@ -7,6 +7,10 @@ Route::get('shop', [
 	'uses' => 'ProductController@getIndex',
 	'as' => 'product.index'
 ]);
+Route::get('/show/{id}', [
+	'uses' => 'ProductController@showItem',
+	'as' => 'product.show'
+]);
 Route::get('/add-to-cart/{id}', [
 	'uses' => 'ProductController@getAddToCart',
 	'as' => 'product.addToCart'
