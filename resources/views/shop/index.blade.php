@@ -29,9 +29,10 @@
 					    <ul class="list-group">
 						    @if (Session::has('cart'))
 							@foreach ($items as $item)
-							<li class="list-group-item">
-								{{ $item['qty'] }} x {{ $item['item']['productName'] }}
-							</li>
+								<li class="list-group-item">
+									{{ $item['qty'] }} x {{ $item['item']['productName'] }}
+									<span class="badge">${{ $item['price'] }}</span>
+								</li>
 							@endforeach
 							<li class="list-group-item list-group-item-success">Total <span class="pull-right"><strong >${{ Session::get('cart')->totalPrice }}</strong></span></li>
 							@endif
