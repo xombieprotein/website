@@ -17,7 +17,10 @@
 					@else
 					<h1>Checkout</h1>
 					<h4>Your Total: ${{ $total }}</h4>
-					<div id="charge-error" class="alert alert-danger {{ !Session::has('error') ? 'hidden' : ''  }}">
+					<div id="charge-error" class="alert alert-danger {{ !Session::has('error') ? 'hidden' : ''  }}" role="alert">
+						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
 		                {{ Session::get('error') }}
 		            </div>
 					<form action="{{ route('checkout') }}" method="post" id="checkout-form">

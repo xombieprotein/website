@@ -16,7 +16,11 @@ body {background: #252830;}
 #profileNav {padding-bottom: 1.5em}
 #orders ul li {list-style: none; padding: 0;}
 #itemName, #itemQty,#itemPrice {padding: 0;}
+#emptyCart {font-weight: 100; color: #AEB0AE}
+#emptyCartIcon {color: #AEB0AE; display: block; text-align: center; font-size: 500%;}
+#priceLabel {margin: 1em 0; font-size: 120%;}
 .panel-item, .panel-checkout {border-radius: 0;}
+.btn-success {background: #A2AD7E; border-color: #8a9a58;}
 @media (min-width: 768px) {
 	#xpImg-1, #xpImg-2 {height: 35em;}
 	#productDescription {max-height: 150px; overflow: auto;}

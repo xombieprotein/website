@@ -11,34 +11,36 @@
 	@if(Session::has('success'))
 	<div class="row">
 		<div class="col-sm-6 col-md-4 col-sm-offset-3 col-md-offset-4">
-			<div id="charge-message" class="alert alert-success">
+			<div id="charge-message" class="alert alert-success fade in">
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
 				{{ Session::get('success') }}
 			</div>
 		</div>
 	</div>
 	@endif
 	<div class="row">
-			    <div class="col-md-3 col-md-push-9 col-lg-2 col-lg-push-8">
+			    <div class="col-md-3 col-md-push-9 col-lg-3 col-lg-push-8">
 				    <div class="panel panel-checkout">
 					    <div class="panel-heading">
 						    <h4 class="text-center">Shopping Cart</h4>
 					    </div>
 					    <ul class="list-group">
-							@if (Session::has('cart'))
-								@foreach ($products as $product)
-									<li class="list-group-item">
-										{{{ $product->productName }}}
-									</li>
-								@endforeach
-								<li class="list-group-item list-group-item-success">Total <span class="pull-right"><strong >${{ Session::get('cart')->totalPrice }}</strong></span></li>
-							@endif
+							@foreach ($items as $item)
+							<li class="list-group-item">
+								{{ $item['qty'] }} x {{ $item['item']['productName'] }}
+								<span class="pull-right">${{ $item['price'] }}</span>
+							</li>
+							@endforeach
+							<li class="list-group-item list-group-item-success">Total <span class="pull-right"><strong >${{ Session::get('cart')->totalPrice }}</strong></span></li>
 					    </ul>
 					    <div class="panel-footer">
 							<a href="{{ route('product.shoppingCart') }}" class="btn btn-success btn-block"><i class="glyphicon glyphicon-shopping-cart"></i> Checkout</a>
 					    </div>
 				    </div>
 			    </div>
-			    <div class="col-md-9 col-md-pull-3 col-lg-7 col-lg-pull-1">
+			    <div class="col-md-9 col-md-pull-3 col-lg-7 col-lg-pull-2">
 				    <nav class="navbar navbar-inverse">
 					    <div class="container-fluid">
 							<ul class="nav navbar-nav navbar-right">
@@ -69,8 +71,10 @@
 							    		<p id="productDescription">
 									    	{{{ $product->productDescription }}}
 								    	</p>
+										<div class="clearfix" id="priceLabel">
+											<div class="label label-success pull-right">Unit Price: ${{ $product->price }}</div>
+										</div>
 								    	<div class="clearfix">
-									    	<a class="btn btn-default"><strong>${{ $product->price }}</strong></a>
 									    	<a class="btn btn-success pull-right" id="cartBtn" href="{{ route('product.addToCart', ['id' => $product->id]) }}"><span class="glyphicon glyphicon-shopping-cart"></span> Add To Cart</a>
 								    	</div>
 						    		</div>

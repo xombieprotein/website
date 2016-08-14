@@ -25,7 +25,8 @@ Route::get('/add/{id}', [
 ]);
 Route::get('/shopping-cart', [
 	'uses' => 'ProductController@getCart',
-	'as' => 'product.shoppingCart'
+	'as' => 'product.shoppingCart',
+	'middleware' => 'auth'
 ]);
 Route::get('/checkout', [
 	'uses' => 'ProductController@getCheckout',
