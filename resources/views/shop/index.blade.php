@@ -62,7 +62,7 @@
 								<li><a><span class="glyphicon glyphicon glyphicon-th"></span> Grid</a></li>
 								<li><a><span class="glyphicon glyphicon glyphicon-th-list"></span> List</a></li>
 								<li class="dropdown">
-								  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-sort"></span> Refine Search <span class="caret"></span></a>
+								  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-sort"></span> Sort By <span class="caret"></span></a>
 								  <ul class="dropdown-menu">
 								    <li><a href="#"><span class="glyphicon glyphicon-sort-by-attributes"></span> Price Lowest - Highest</a></li>
 								    <li><a href="#"><span class="glyphicon glyphicon-sort-by-attributes-alt"></span> Price Highest - Lowest</a></li>
