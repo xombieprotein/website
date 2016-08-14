@@ -27,13 +27,14 @@
 						    <h4 class="text-center">Shopping Cart</h4>
 					    </div>
 					    <ul class="list-group">
+						    @if (Session::has('cart'))
 							@foreach ($items as $item)
 							<li class="list-group-item">
 								{{ $item['qty'] }} x {{ $item['item']['productName'] }}
-								<span class="pull-right">${{ $item['price'] }}</span>
 							</li>
 							@endforeach
 							<li class="list-group-item list-group-item-success">Total <span class="pull-right"><strong >${{ Session::get('cart')->totalPrice }}</strong></span></li>
+							@endif
 					    </ul>
 					    <div class="panel-footer">
 							<a href="{{ route('product.shoppingCart') }}" class="btn btn-success btn-block"><i class="glyphicon glyphicon-shopping-cart"></i> Checkout</a>
