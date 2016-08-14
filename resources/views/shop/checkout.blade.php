@@ -79,6 +79,23 @@
 					@endif
 				</div>
 			</div>
+			<div id="cancellation">
+				<h4 class="small text-center">Cancellation Policy:</h4>
+				<p class="text-center">
+					<small>
+						Xombie Protein accepts cancellations for orders 7 days after purchase. 
+						To cancel an order, please email the team with your name, purchase item 
+						and confirmation number received within your order confirmation email, 
+						and we will reply within 24 hours. Customer’s are required to ship the 
+						unwanted item for return to our main office at the customer’s expense. 
+						Items must be unopened and returned in original packaging. If you would 
+						like a different item instead of a refund, please state within the email. 
+						Refunds will be transferred once cleared, and should be received within 3-5 
+						working days. We only provide refunds via bank transfer, no mailed cheques 
+						or cash is available.
+					</small>
+				</p>
+			</div>
 		</div>
 	</div>
 @endsection
