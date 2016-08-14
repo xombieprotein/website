@@ -40,9 +40,9 @@
 								</td>
 								<td>
 									<div class="btn-group">
-										<button type="button" class="btn btn-default btn-xs"><i class="glyphicon glyphicon-minus"></i></button>
-										<button type="button" class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-trash"></i></button>
-										<button type="button" class="btn btn-default btn-xs"><i class="glyphicon glyphicon-plus"></i></button>
+										<a href="{{ route('product.reduce', ['id' => $product['item']['id']]) }}" class="btn btn-default btn-xs"><i class="glyphicon glyphicon-minus"></i></a>
+										<a href="{{ route('product.remove', ['id' => $product['item']['id']]) }}" class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-trash"></i></a>
+										<a href="{{ route('product.add', ['id' => $product['item']['id']]) }}" type="button" class="btn btn-default btn-xs"><i class="glyphicon glyphicon-plus"></i></a>
 									</div>
 								</td>
 								</tr>

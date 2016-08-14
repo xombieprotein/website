@@ -12,7 +12,10 @@ body {background: #252830;}
 #xpImg-1 h2, #xpImg-2 h2 {color: white; position: absolute; top: 50%; transform: translateY(-50%); left: 0; right: 0;}
 #xpImg-1:hover {background-color: rgba(61, 32, 17, 0.8);}
 #xpImg-2:hover {background-color: rgba(226, 213, 66, 0.8)}
+#chimp {padding: 3em 0}
 #profileNav {padding-bottom: 1.5em}
+#orders ul li {list-style: none; padding: 0;}
+#itemName, #itemQty,#itemPrice {padding: 0;}
 .panel-item, .panel-checkout {border-radius: 0;}
 @media (min-width: 768px) {
 	#xpImg-1, #xpImg-2 {height: 35em;}

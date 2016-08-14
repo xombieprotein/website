@@ -106,36 +106,46 @@
 			        	<h3 class="lead">Purchase History</h3>
 		        	</div>
 		        	<div class="panel-body">
-			        	<p>Purchase History will go here</p>
+			        	<p>Below is a list of all your purchases.</p>
 		        	</div>
-		        	<table class="table table-condensed table-hover">
+		        	<table class="table table-striped table-hover">
 			        	<thead>
 				        	<tr>
-					        	<th>What</th>
-					        	<th>What</th>
-					        	<th>What</th>
-					        	<th>What</th>
+					        	<th>Purchase ID</th>
+					        	<th>Purchase Item/s</th>
+					        	<th>Item Quantity</th>
+					        	<th>Item Price</th>
+					        	<th>Total Price</th>
 				        	</tr>
 			        	</thead>
 			        	<tbody>
-				        	<tr>
-					        	<th>1</th>
-					        	<td>This</td>
-					        	<td>This</td>
-					        	<td>This</td>
-				        	</tr>
-				        	<tr>
-					        	<th>1</th>
-					        	<td>This</td>
-					        	<td>This</td>
-					        	<td>This</td>
-				        	</tr>
-				        	<tr>
-					        	<th>1</th>
-					        	<td>This</td>
-					        	<td>This</td>
-					        	<td>This</td>
-				        	</tr>
+				        	@foreach($orders as $order)
+					        	<tr id="orders">
+						        	<th>{{ $order->id }}</th>
+						        	<td>
+							        	<ul id="itemName">
+						        		@foreach($order->cart->items as $item)
+											<li>{{ $item['item']['productName'] }}</li>
+							        	@endforeach
+							        	</ul>
+						        	</td>
+						        	<td>
+							        	<ul id="itemQty">
+						        		@foreach($order->cart->items as $item)
+											<li>{{ $item['qty'] }}</li>
+							        	@endforeach
+							        	</ul>
+						        	</td>
+						        	<td>
+							        	<ul id="itemPrice">
+						        		@foreach($order->cart->items as $item)
+											<li>${{ $item['price'] }}</li>
+							        	@endforeach
+							        	</ul>
+						        	</td>
+						        	<td>${{ $order->cart->totalPrice }}</td>
+					        	</tr>
+				        	@endforeach
 			        	</tbody>
 		        	</table>
 	        	</div>
