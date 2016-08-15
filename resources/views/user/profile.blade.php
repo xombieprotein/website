@@ -154,7 +154,6 @@
 				<div role="tabpanel" class="tab-pane fade" id="settings">
 					<div class="panel panel-default">
 						<div class="panel-body">
-							<a href="#" class="btn btn-danger"><i class="glyphicon glyphicon-trash"></i> Delete Account</a>
 							<form method="POST" action="/profile/delete/{{ Auth::user()->id}}">
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
                             <input type="hidden" name="_method" value="DELETE" />
