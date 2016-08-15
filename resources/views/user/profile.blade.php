@@ -37,6 +37,9 @@
         	</div>
         </div>
     @else
+    	<nav class="nav nav-tabs">
+	    	<a href="{{ route('profile.edit', ['id' => Auth::user()->id]) }}">Edit</a>
+    	</nav>
     	<div class="row">
 			<div class="col-sm-2 col-lg-2 col-lg-offset-1" id="profileNav">
 				<!-- Nav tabs -->
@@ -69,9 +72,9 @@
 					        	<h3 class="lead">Shipping Information</h3>
 				        	</div>
 				        	<div class="panel-body">
-					        	<h4><small>NAME</small> {{ Auth::user()->name }}</h4>
-					        	<h4><small>EMAIL</small> {{ Auth::user()->email }}</h4>
-					        	<h4><small>ADDRESS</small> {{ Auth::user()->email }}</h4>
+					        	<h4><small>ADDRESS</small> {{ Auth::user()->address }}</h4>
+					        	<h4><small>SUBURB</small> {{ Auth::user()->city }}, {{ Auth::user()->state }}</h4>
+					        	<h4><small>POST CODE</small> {{ Auth::user()->postalcode }}</h4>
 				        	</div>
 			        	</div>
 		        	</div>
@@ -81,9 +84,7 @@
 					        	<h3 class="lead">Payment Information</h3>
 				        	</div>
 				        	<div class="panel-body">
-					        	<h4><small>NAME</small> {{ Auth::user()->name }}</h4>
-					        	<h4><small>EMAIL</small> {{ Auth::user()->email }}</h4>
-					        	<h4><small>ADDRESS</small> {{ Auth::user()->email }}</h4>
+					        	<p class="lead"></p>
 				        	</div>
 			        	</div>
 		        	</div>
@@ -153,7 +154,14 @@
 				<div role="tabpanel" class="tab-pane fade" id="settings">
 					<div class="panel panel-default">
 						<div class="panel-body">
-							Account Deletion will go here
+							<a href="#" class="btn btn-danger"><i class="glyphicon glyphicon-trash"></i> Delete Account</a>
+							<form method="POST" action="/profile/delete/{{ Auth::user()->id}}">
+                            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                            <input type="hidden" name="_method" value="DELETE" />
+                            <button type="submit" class="btn btn-danger">
+                                <i class="glyphicon glyphicon-trash"></i> Delete Account
+                            </button>
+                        </form>
 						</div>
 					</div>
 				</div>

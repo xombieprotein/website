@@ -11,11 +11,13 @@
 	<div class="row">
 		<div class="col-sm-6 col-md-4 col-sm-offset-3 col-md-offset-4">
 			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h2 class="text-center text-uppercase">Checkout</h2>
+				</div>
 				<div class="panel-body">
 					@if (Auth::guest())
 						<h1 class="text-center">Please Sign In First</h1>
 					@else
-					<h1>Checkout</h1>
 					<h4>Your Total: ${{ $total }}</h4>
 					<div id="charge-error" class="alert alert-danger {{ !Session::has('error') ? 'hidden' : ''  }}" role="alert">
 						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -23,7 +25,7 @@
 						</button>
 		                {{ Session::get('error') }}
 		            </div>
-					<form action="{{ route('checkout') }}" method="post" id="checkout-form">
+					<form action="{{ route('checkout') }}" method="post" id="checkout-form" autocomplete="on">
 						<div class="row">
 		                    <div class="col-xs-12">
 		                        <div class="form-group">
@@ -34,7 +36,7 @@
 		                    <div class="col-xs-12">
 		                        <div class="form-group">
 		                            <label for="address">Address</label>
-		                            <input type="text" id="address" class="form-control" required name="address">
+		                            <input type="text" id="address" class="form-control" required name="address" autocomplete="street-address" value="{{ Auth::user()->address }}, {{ Auth::user()->city }}, {{ Auth::user()->state }}, {{ Auth::user()->postalcode }}">
 		                        </div>
 		                    </div>
 		                    <hr>
@@ -52,7 +54,7 @@
 		                    </div>
 		                    <div class="col-xs-12">
 		                        <div class="row">
-		                            <div class="col-xs-6">
+		                            <div class="col-xs-6 col-sm4">
 		                                <div class="form-group">
 		                                    <label for="card-expiry-month">Expiration Month</label>
 		                                    <input type="text" id="card-expiry-month" class="form-control" required>
@@ -74,7 +76,7 @@
 		                    </div>
 		                </div>
 		                {{ csrf_field() }}
-		                <button type="submit" class="btn btn-success">Buy now</button>
+		                <div class="panel-body"><button type="submit" class="btn btn-success btn-block btn-lg"><strong>Buy now</strong></button></div>
 					</form>
 					@endif
 				</div>

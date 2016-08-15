@@ -9,7 +9,7 @@
                 <div class="panel-body">
                     <form class="form-horizontal" role="form" method="POST" action="{{ url('/register') }}">
                         {{ csrf_field() }}
-
+                        <p class="text-center lead">Account Details</p>
                         <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
                             <label for="name" class="col-md-4 control-label">Name</label>
 
@@ -65,7 +65,38 @@
                                 @endif
                             </div>
                         </div>
+                        
+                        <hr>
+                        <p class="text-center lead">Shipping Details</p>
+<!--                         <div class="row"><div class="col-md-6 col-md-offset-3"><p class="small lead text-center">Please note that filling out shipping information is not required to register an account, but will save you time later when making an order.</p></div></div> -->
+						<div class="form-group">
+                            <label for="address" class="col-md-4 control-label">Address</label>
 
+                            <div class="col-md-6">
+                                <input id="address" type="text" class="form-control" name="address">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="city" class="col-md-4 control-label">Suburb</label>
+
+                            <div class="col-md-6">
+                                <input id="city" type="text" class="form-control" name="city">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="state" class="col-md-4 control-label">State</label>
+
+                            <div class="col-md-6">
+                                <input id="state" type="text" class="form-control" name="state">
+                            </div>
+                        </div>
+                         <div class="form-group">
+                            <label for="postalcode" class="col-md-4 control-label">Post Code</label>
+
+                            <div class="col-md-6">
+                                <input id="postalcode" type="text" pattern="0-9" class="form-control" name="postalcode">
+                        	</div>
+                        </div>
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">

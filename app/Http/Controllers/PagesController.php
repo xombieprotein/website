@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\User;
 use App\Http\Requests;
 use Auth;
 
@@ -13,12 +14,6 @@ class PagesController extends Controller
 	{
 		return view('welcome');
 	}
-	
-	public function about()
-	{
-		return view('about');
-	}
-	
 	public function profile()
 	{
 		$orders = Auth::user()->orders;
@@ -26,6 +21,23 @@ class PagesController extends Controller
 			$order->cart = unserialize($order->cart);
 			return $order;
 		});
-		return view('user.profile', ['orders' => $orders]);
+		return view('user.profile', compact('orders'));
 	}
+	public function editProfile($id)
+    {
+    	$user = User::find($id);
+    	return view('user.edit', ['user' => $user]);
+    }
+    
+    public function updateProfile(Request $request, User $id) {
+	    $id->update($request->all());
+	    return redirect()->action('PagesController@profile');
+    }
+	
+	public function deleteProfile($id)
+	{
+		User::find($id)->delete();
+		return view('welcome');
+	}
+	
 }

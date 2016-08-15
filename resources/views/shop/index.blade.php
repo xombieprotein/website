@@ -79,10 +79,10 @@
 		    		<div class="col-sm-4">
 			    		<div class="panel panel-item">
 							<img src="{{ $product->imagePath }}" class="img-responsive center-block">
-				    		<h4 class="text-center">
-					    		<a href="{{ route('product.show', ['id' => $product->id]) }}">{{{ $product->productName }}}</a>
-				    		</h4>
 				    		<div class="panel-body">
+					    		<h4 class="text-center">
+						    		<a href="{{ route('product.show', ['id' => $product->id]) }}">{{{ $product->productName }}}</a>
+					    		</h4>
 					    		<p id="productDescription">
 							    	{{{ $product->productDescription }}}
 						    	</p>

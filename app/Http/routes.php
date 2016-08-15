@@ -44,3 +44,9 @@ Route::post('/checkout', [
 ]);
 
 Route::auth();
+Route::get('profile/{id}/edit', [
+	'uses' => 'PagesController@editProfile',
+	'as' => 'profile.edit'
+]);
+Route::patch('profile/{id}', 'PagesController@updateProfile');
+Route::delete('profile/delete/{id}', 'PagesController@deleteProfile');

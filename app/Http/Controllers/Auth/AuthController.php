@@ -69,6 +69,11 @@ class AuthController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
+            'address' => $data['address'],
+            'city' => $data['city'],
+            'state' => $data['state'],
+            'postalcode' => $data['postalcode']
+            
         ]);
     }
     public function logout()
