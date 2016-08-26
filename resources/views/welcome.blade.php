@@ -100,3 +100,6 @@
 		</div>
 	</div>
 @endsection
+@section('footer')
+	<h1 class="text-capitalize text-center">This Is A Test</h1>
+@endsection
