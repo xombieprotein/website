@@ -38,7 +38,7 @@ footer h4 {color: #666666; padding: 0.6em;}
 	#xpImg-1, #xpImg-2 {height: 35em;}
 	#productDescription {max-height: 150px; overflow: auto;}
 	footer {padding: 1em;}
-	#footerRight>#footerNav {text-align: right;}
+	#footerRight {text-align: right;}
 }
 @media (min-width: 1200px) {
 	footer {padding: 3em;}
