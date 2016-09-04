@@ -1,6 +1,8 @@
 a {-webkit-transition: all 0.2s ease-in-out;-moz-transition: all 0.3s ease-in-out;-ms-transition: all 0.2s ease-in-out;-o-transition: all 0.2s ease-in-out;transition: all 0.2s ease-in-out;}
 h1, h2 {font-weight: 300;}
-body {background: #252830;}
+body {background: #252830; height: 100vh;}
+#wrapper {min-height:100%; position:relative;}
+#pageContent {padding-bottom: 31em}
 .navbar-inverse {background: #39393d; border: none;}
 #hero {background-image: url(../img/muscle-1.jpg); background-color: rgba(0,0,0,0.3); background-blend-mode: overlay; background-position: 88% 0; max-height: 100%; background-size: cover; color: white; border-radius: 0; margin-top: -20px; padding: 17% 0;}
 #hero-heading {margin-top: 0; font-weight: 900;}
@@ -25,10 +27,20 @@ body {background: #252830;}
 #backButton:hover {text-decoration: none; color: #AEB0AE;}
 .panel-item, .panel-checkout {border-radius: 0;}
 .btn-success {background: #A2AD7E; border-color: #8a9a58;}
+footer {width:100%; height:auto; position:absolute; bottom:0; left:0; background: #39393d; padding: 0; margin-top: 2em; color: white;}
+footer h4 {color: #666666; padding: 0.6em;}
+#footerNav {list-style: none; padding-left: 0; margin: 0;}
+#footerNav li a {position: relative; display: inline-block; padding: 0.7142857143em 0;}
+#footerNav li+li {margin-top: 2px;}
+#footerLeft, #footerCenter, #footerRight {min-height: 14.642857143em;}
 @media (min-width: 768px) {
+	#pageContent {padding-bottom: 21.5em;}
 	#xpImg-1, #xpImg-2 {height: 35em;}
 	#productDescription {max-height: 150px; overflow: auto;}
+	footer {padding: 1em;}
+	#footerRight>#footerNav {text-align: right;}
 }
 @media (min-width: 1200px) {
+	footer {padding: 3em;}
 	#xpImg-1, #xpImg-2 {height: 48em; background-image: url(../img/proteinbag@2x.jpg);}
 }
