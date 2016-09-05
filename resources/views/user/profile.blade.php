@@ -117,8 +117,19 @@
 								        <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel">
 									        <div class="modal-dialog" role="document">
 										        <div class="modal-content">
+											        <div class="modal-header">
+														<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+														<h4 class="modal-title text-danger" id="deleteModalLabel">Attention!</h4>
+													</div>
+											        <div class="modal-body">
+												        <p class="lead">
+													        Just so we're all on the same page here, pressing the red Delete Account button will permanently erase
+													        your account and your purchase history. Are you sure?
+												        </p>
+											        </div>
 											        <div class="modal-footer">
-														<form method="POST" action="/profile/delete/{{ Auth::user()->id}}">
+												        <button type="button" class="btn btn-default" data-dismiss="modal">No! Take Me Back</button>
+														<form method="POST" style="display: inline-block" action="/profile/delete/{{ Auth::user()->id}}">
 								                            <input type="hidden" name="_token" value="{{ csrf_token() }}">
 								                            <input type="hidden" name="_method" value="DELETE" />
 								                            <button type="submit" class="btn btn-danger">
