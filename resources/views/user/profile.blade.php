@@ -110,14 +110,25 @@
 							        	your purchase history.
 						        	</p>
 						        	<div class="col-md-4 text-right"><h4><small >DELETE ACCOUNT</small></h4></div>
-							        <div class="col-md-6">	
-										<form method="POST" action="/profile/delete/{{ Auth::user()->id}}">
-				                            <input type="hidden" name="_token" value="{{ csrf_token() }}">
-				                            <input type="hidden" name="_method" value="DELETE" />
-				                            <button type="submit" class="btn btn-danger">
-				                                <i class="glyphicon glyphicon-trash"></i> Delete Account
-				                            </button>
-				                        </form>
+							        <div class="col-md-6">
+								        <button class="btn btn-danger" data-toggle="modal" data-target="#deleteModal">
+								        	<i class="glyphicon glyphicon-trash"></i> Delete Account
+								        </button>
+								        <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel">
+									        <div class="modal-dialog" role="document">
+										        <div class="modal-content">
+											        <div class="modal-footer">
+														<form method="POST" action="/profile/delete/{{ Auth::user()->id}}">
+								                            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+								                            <input type="hidden" name="_method" value="DELETE" />
+								                            <button type="submit" class="btn btn-danger">
+								                                <i class="glyphicon glyphicon-trash"></i> Delete Account
+								                            </button>
+							                        </form>
+							                        </div>
+							                    </div>
+					                        </div>
+				                        </div>
 			                        </div>
 		                        </div>
 				        	</div>
