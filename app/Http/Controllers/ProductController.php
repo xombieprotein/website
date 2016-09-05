@@ -82,6 +82,7 @@ class ProductController extends Controller
     
     public function getCart()
     {
+	    // If the cart is empty, return the shopping cart view as empty
     	if (!Session::has('cart')) {
 	    	return view('shop.shopping-cart');
 	    }
