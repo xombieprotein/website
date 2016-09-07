@@ -50,3 +50,7 @@ Route::get('profile/{id}/edit', [
 ]);
 Route::patch('profile/{id}', 'PagesController@updateProfile');
 Route::delete('profile/delete/{id}', 'PagesController@deleteProfile');
+
+Route::get('protected', ['middleware' => ['auth', 'admin'], function() {
+    return "this page requires that you be logged in and an Admin";
+}]);
