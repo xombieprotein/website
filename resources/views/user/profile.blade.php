@@ -43,10 +43,11 @@
 				<ul class="nav nav-pills nav-stacked" role="tablist">
 					<li role="presentation" class="active"><a href="#dashboard" aria-controls="dashboard" role="tab" data-toggle="pill">Account Information</a></li>
 					<li role="presentation"><a href="#purchases" aria-controls="purchases" role="tab" data-toggle="pill">Purchase History</a></li>
+					@if (Auth::user()->isAdmin())
 					<li><h3><small>Administrator</small></h3></li>
 					<li class="nav-divider"></li>
 					<li role="presentation"><a href="#products" aria-controls="purchases" role="tab" data-toggle="pill">Product Management</a></li>
-					<li role="presentation"><a href="#orders" aria-controls="purchases" role="tab" data-toggle="pill">Order Management</a></li>
+					@endif
 				</ul>
 			</div>
 			<div class="col-sm-10 col-lg-8">
@@ -195,6 +196,43 @@
 							        	</ul>
 						        	</td>
 						        	<td>${{ $order->cart->totalPrice }}</td>
+					        	</tr>
+				        	@endforeach
+			        	</tbody>
+		        	</table>
+	        	</div>
+				</div>
+				<div role="tabpanel" class="tab-pane fade" id="products">
+					<div class="panel panel-default">
+		        	<div class="panel-heading">
+			        	<h3 class="lead">Products</h3>
+		        	</div>
+		        	<div class="panel-body">
+			        	<p>Below is a list of all products available in the store. Click the edit button to add stock to a product, or change product details. Click the + Button to add a new product.</p>
+		        	</div>
+		        	<table class="table table-striped table-hover">
+			        	<thead>
+				        	<tr>
+					        	<th>Product ID</th>
+					        	<th>Product Name/s</th>
+					        	<th>Product Stock</th>
+					        	<th>Item Price</th>
+					        	<th>Total Price</th>
+				        	</tr>
+			        	</thead>
+			        	<tbody>
+				        	@foreach($products as $product)
+					        	<tr id="orders">
+						        	<th>{{ $product->id }}</th>
+						        	<td>
+										{{ $product->productName }}
+						        	</td>
+						        	<td>
+										{{ $product->stockAmount }}
+						        	</td>
+						        	<td>
+						        	</td>
+						        	<td></td>
 					        	</tr>
 				        	@endforeach
 			        	</tbody>
