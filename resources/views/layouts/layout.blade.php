@@ -71,7 +71,7 @@
 				                    	<li><a href="{{ url('/login') }}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
 										<li><a href="{{ url('/register') }}"><span class="glyphicon glyphicon-user"></span> Register</a></li>
 				                    @else
-				                    	<li><small>Currently logged in as {{ Auth::user()->name }}</small></li>
+				                    	<li><small><span class="glyphicon glyphicon-user"></span> {{ Auth::user()->name }}</small></li>
 				                    	<li class="nav-divider"></li>
 			                            <li><a href="{{ url('/profile') }}"><span class="glyphicon glyphicon-dashboard"></span> Dashboard</a></li>
 		                                <li><a href="{{ url('/logout') }}"><i class="glyphicon glyphicon-log-out"></i> Logout</a></li>
