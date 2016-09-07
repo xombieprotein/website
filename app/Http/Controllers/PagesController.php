@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\User;
+use App\Product;
 use App\Http\Requests;
 use Auth;
 
@@ -16,12 +17,13 @@ class PagesController extends Controller
 	}
 	public function profile()
 	{
+		$products = Product::all();
 		$orders = Auth::user()->orders;
 		$orders->transform(function($order, $key){
 			$order->cart = unserialize($order->cart);
 			return $order;
 		});
-		return view('user.profile', compact('orders'));
+		return view('user.profile', compact('orders', 'products'));
 	}
 	public function editProfile($id)
     {
