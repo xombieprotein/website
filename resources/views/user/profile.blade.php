@@ -43,6 +43,10 @@
 				<ul class="nav nav-pills nav-stacked" role="tablist">
 					<li role="presentation" class="active"><a href="#dashboard" aria-controls="dashboard" role="tab" data-toggle="pill">Account Information</a></li>
 					<li role="presentation"><a href="#purchases" aria-controls="purchases" role="tab" data-toggle="pill">Purchase History</a></li>
+					<li><h3><small>Administrator</small></h3></li>
+					<li class="nav-divider"></li>
+					<li role="presentation"><a href="#products" aria-controls="purchases" role="tab" data-toggle="pill">Product Management</a></li>
+					<li role="presentation"><a href="#orders" aria-controls="purchases" role="tab" data-toggle="pill">Order Management</a></li>
 				</ul>
 			</div>
 			<div class="col-sm-10 col-lg-8">
