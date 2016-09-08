@@ -26,6 +26,7 @@ class ProductController extends Controller
 		    return view('shop.index', ['products' => $products]);
 	    }
     }
+    
     public function getAddToCart(Request $request, $id)
     {
     	$product = Product::find($id);
@@ -36,11 +37,15 @@ class ProductController extends Controller
     	$request->session()->put('cart', $cart);
     	return redirect()->action('ProductController@getIndex');
     }
+    
+    // This function displays the item when you click on its name in the shop view
     public function showItem($id)
     {
     	$product = Product::find($id);
     	return view('shop.show', ['product' => $product]);
     }
+    
+    
     public function getReduceItem($id)
     {
     	$oldCart = Session::has('cart') ? Session:: get('cart') : null;

@@ -51,6 +51,20 @@ Route::get('profile/{id}/edit', [
 Route::patch('profile/{id}', 'PagesController@updateProfile');
 Route::delete('profile/delete/{id}', 'PagesController@deleteProfile');
 
+Route::get('product/add', [
+	'uses' => 'PagesController@addProduct',
+	'middleware' => ['auth', 'admin']
+]);
+
+Route::get('product/edit/{id}', [
+	'uses' => 'PagesController@editProduct',
+	'as' => 'product.edit',
+	'middleware' => ['auth', 'admin']
+]);
+Route::patch('product/update/{id}', 'PagesController@updateProduct');
+Route::delete('product/delete/{id}', 'PagesController@deleteProduct');
+
+//Route for creating an admin only dashboard. This route is currently not utilised.
 Route::get('protected', ['middleware' => ['auth', 'admin'], function() {
     return "this page requires that you be logged in and an Admin";
 }]);

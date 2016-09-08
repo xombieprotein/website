@@ -208,31 +208,52 @@
 			        	<h3 class="lead">Products</h3>
 		        	</div>
 		        	<div class="panel-body">
-			        	<p>Below is a list of all products available in the store. Click the edit button to add stock to a product, or change product details. Click the + Button to add a new product.</p>
+			        	<p class="lead">Below is a list of all products available in the store. Click the edit button to add stock to a product, change product details, or to remove that product. Click the + Button to add a new product.</p>
+			        	<div class="clearfix">
+				        	<a href="{{ url('/product/add') }}" class="text-success pull-right"><span class="glyphicon glyphicon-plus"></span> Add Product</a>
+			        	</div>
 		        	</div>
 		        	<table class="table table-striped table-hover">
 			        	<thead>
 				        	<tr>
 					        	<th>Product ID</th>
-					        	<th>Product Name/s</th>
+					        	<th>Product Name</th>
+					        	<th>Product Description</th>
 					        	<th>Product Stock</th>
-					        	<th>Item Price</th>
-					        	<th>Total Price</th>
+					        	<th>Product Price</th>
+					        	<th>Product Weight</th>
+					        	<th>Options</th>
 				        	</tr>
 			        	</thead>
 			        	<tbody>
 				        	@foreach($products as $product)
-					        	<tr id="orders">
+					        	<tr id="productTable">
 						        	<th>{{ $product->id }}</th>
 						        	<td>
 										{{ $product->productName }}
 						        	</td>
 						        	<td>
+										{{ $product->productDescription }}
+						        	</td>
+						        	<td>
 										{{ $product->stockAmount }}
 						        	</td>
 						        	<td>
+							        	${{ $product->price }}
 						        	</td>
-						        	<td></td>
+						        	<td>
+							        	{{ $product->productWeight }}
+						        	</td>
+						        	<td>
+							        	<a class="btn btn-primary btn-sm" href="{{ route('product.edit', ['id' => $product->id]) }}">Edit Product</a>
+							        	<form method="POST" style="display: inline-block" action="/product/delete/{{ $product->id }}">
+				                            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+				                            <input type="hidden" name="_method" value="DELETE" />
+				                            <button type="submit" class="btn btn-danger btn-sm">
+				                                <i class="glyphicon glyphicon-trash"></i> Delete Product
+				                            </button>
+				                        </form>
+						        	</td>
 					        	</tr>
 				        	@endforeach
 			        	</tbody>

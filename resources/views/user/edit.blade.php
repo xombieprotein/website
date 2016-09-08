@@ -48,7 +48,6 @@
                     
                     <hr>
                     <p class="text-center lead">Shipping Details</p>
-<!--                         <div class="row"><div class="col-md-6 col-md-offset-3"><p class="small lead text-center">Please note that filling out shipping information is not required to register an account, but will save you time later when making an order.</p></div></div> -->
 					<div class="form-group">
                         <label for="address" class="col-md-4 control-label">Address</label>
 

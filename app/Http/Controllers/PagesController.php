@@ -41,5 +41,32 @@ class PagesController extends Controller
 		User::find($id)->delete();
 		return view('welcome');
 	}
+
+		public function addProduct()
+	{
+		return view('product.add');
+	}
 	
+	public function storeProduct($id)
+	{
+		
+	}
+
+	public function editProduct($id)
+    {
+    	$product = Product::find($id);
+    	return View('product.edit', ['product' => $product]);
+    }
+    
+    public function updateProduct(Request $request, Product $id)
+    {
+    	$id->update($request->all());
+		return redirect()->action('PagesController@profile');
+    }
+    
+    public function deleteProduct(Product $id)
+	{
+		Product::find($id)->delete();
+		return Redirect()->action('PagesController@profile');
+	}	
 }
