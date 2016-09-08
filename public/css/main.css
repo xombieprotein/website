@@ -34,7 +34,7 @@ footer h4 {color: #666666; padding: 0.6em;}
 #footerNav li+li {margin-top: 2px;}
 #footerLeft, #footerCenter, #footerRight {min-height: 14.642857143em;}
 @media (min-width: 768px) {
-	#pageContent {padding-bottom: 21.5em;}
+	#pageContent {padding-bottom: 25em;}
 	#xpImg-1, #xpImg-2 {height: 35em;}
 	#productDescription {max-height: 150px; overflow: auto;}
 	footer {padding: 1em;}

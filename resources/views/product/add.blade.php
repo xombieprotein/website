@@ -14,18 +14,22 @@
 				<h2 class="text-center">Edit Product Information</h2>
 			</div>
 			<div class="panel-body">
-				<form class="form-horizontal" role="form" method="POST" action="">
+				<form class="form-horizontal" role="form" method="POST" action="/product/store">
                     {{ csrf_field() }}
                     <p class="text-center lead">Product Details</p>
+					<div class="form-group">
+						<label for="imagePath" class="col-md-4 control-label">Product Image</label>
+						<div class="col-md-6">
+							<input type="file" id="imagePath" name="imagePath">
+						</div>
+					</div>
                     <div class="form-group">
                         <label for="productName" class="col-md-4 control-label">Product Name</label>
-
                         <div class="col-md-6">
                             <input id="productName" type="text" class="form-control" name="productName">
 
                         </div>
                     </div>
-
                     <div class="form-group">
                         <label for="productDescription" class="col-md-4 control-label">Product Description</label>
 

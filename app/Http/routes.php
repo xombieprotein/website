@@ -56,6 +56,8 @@ Route::get('product/add', [
 	'middleware' => ['auth', 'admin']
 ]);
 
+Route::post('product/store', 'PagesController@storeProduct');
+
 Route::get('product/edit/{id}', [
 	'uses' => 'PagesController@editProduct',
 	'as' => 'product.edit',
