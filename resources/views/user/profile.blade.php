@@ -246,7 +246,7 @@
 						        	</td>
 						        	<td>
 							        	<a class="btn btn-primary btn-sm" href="{{ route('product.edit', ['id' => $product->id]) }}">Edit Product</a>
-							        	<form method="POST" style="display: inline-block" action="/product/delete/{{ $product->id }}">
+							        	<form method="post" style="display: inline-block" action="/product/delete/{{ $product->id }}">
 				                            <input type="hidden" name="_token" value="{{ csrf_token() }}">
 				                            <input type="hidden" name="_method" value="DELETE" />
 				                            <button type="submit" class="btn btn-danger btn-sm">

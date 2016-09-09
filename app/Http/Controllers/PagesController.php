@@ -51,16 +51,13 @@ class PagesController extends Controller
 	{
 		
 		$product = new Product;
-		$product->imagePath = 'img/'.request()->imagePath; //this is really badly coded image injection. Assumes the file is already uploaded to public/img. Will fix this after initial testing today
+ 		$product->imagePath = 'img/'.request()->imagePath; //this is really badly coded image injection. Assumes the file is already uploaded to public/img. Will fix this after initial testing today
 		$product->productName = request()->productName;
 		$product->productDescription = request()->productDescription;
 		$product->stockAmount = request()->stockAmount;
 		$product->price = request()->price;
 		$product->productWeight = request()->productWeight;
 		$product->save();
-		
-		
-		
 		return redirect()->action('PagesController@profile');
 	}
 
@@ -76,9 +73,9 @@ class PagesController extends Controller
 		return redirect()->action('PagesController@profile');
     }
     
-    public function deleteProduct(Product $id)
-	{
-		Product::find($id)->delete();
+    public function deleteProduct($id) {
+ 		$product = Product::find($id);
+ 		$product->delete();
 		return Redirect()->action('PagesController@profile');
 	}	
 }
