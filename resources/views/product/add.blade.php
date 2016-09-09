@@ -11,7 +11,7 @@
 	<div class="col-md-8 col-md-offset-2">
 		<div class="panel panel-default">
 			<div class="panel-heading">
-				<h2 class="text-center">Edit Product Information</h2>
+				<h2 class="text-center">Add Product Information</h2>
 			</div>
 			<div class="panel-body">
 				<form class="form-horizontal" role="form" method="POST" action="/product/store">
@@ -61,7 +61,7 @@
                     <div class="form-group">
                         <div class="col-md-6 col-md-offset-4">
                             <button type="submit" class="btn btn-primary">
-                                <i class="glyphicon glyphicon-ok"></i> Update
+                                <i class="glyphicon glyphicon-ok"></i> Add
                             </button>
                         </div>
                     </div>
