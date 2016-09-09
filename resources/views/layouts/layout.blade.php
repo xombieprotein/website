@@ -79,7 +79,7 @@
 								</ul>
 							</div>
 							<div class="col-sm-3 col-sm-push-6 col-xs-6" id="footerRight">
-								<h4 class="small">Need Support?</h4>
+								<h4 class="small">CONTACT US</h4>
 								<ul id="footerNav">
 									<li><a href="mailto:sophie.smith@griffithuni.edu.au?subject=Xombie%20Protein%20Support%20Request">Email</a></li>
 									<li><a href="#">Twitter</a></li>
