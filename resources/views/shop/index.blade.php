@@ -86,6 +86,7 @@
 					    		<p id="productDescription">
 							    	{{{ $product->productDescription }}}
 						    	</p>
+					    		<a href="{{ route('product.show', ['id' => $product->id]) }}"><span class="glyphicon glyphicon-info-sign"></span>More Information</a>
 								<div class="clearfix" id="priceLabel">
 									<div class="label label-success pull-right">Unit Price: ${{ $product->price }}</div>
 								</div>
