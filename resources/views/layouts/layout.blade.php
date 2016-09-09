@@ -60,7 +60,7 @@
 			</div>
 			<footer>
 				<div class="container-fluid">
-					<div class="col-lg-8 col-lg-offset-2">
+					<div class="col-lg-10 col-lg-offset-1">
 						<div class="row">
 							<div class="col-sm-3 col-xs-6" id="footerLeft">
 								<h4 class="small">Navigate</h4>
