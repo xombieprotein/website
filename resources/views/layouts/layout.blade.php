@@ -49,8 +49,9 @@
 	                                <li><a href="{{ url('/logout') }}"><i class="glyphicon glyphicon-log-out"></i> Logout</a></li>
 	                            </ul>
 	                        </li>
-	                 @endif
-		          </ul>
+						@endif
+	                	<li><a href="mailto:sophie.smith@griffithuni.edu.au?subject=Xombie%20Protein%20Support%20Request">Contact</a></li> 
+					</ul>
 		        </div><!-- /.navbar-collapse -->
 		      </div><!-- /.container-fluid -->
 		    </nav>
