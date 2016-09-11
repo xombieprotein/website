@@ -50,7 +50,7 @@
 	                            </ul>
 	                        </li>
 						@endif
-	                	<li><a href="mailto:sophie.smith@griffithuni.edu.au?subject=Xombie%20Protein%20Support%20Request">Contact</a></li> 
+	                	<li><a href="mailto:sophie.smith@griffithuni.edu.au?subject=Xombie%20Protein%20Support%20Request"><i class="glyphicon glyphicon-envelope"></i> Contact</a></li> 
 					</ul>
 		        </div><!-- /.navbar-collapse -->
 		      </div><!-- /.container-fluid -->
