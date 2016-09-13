@@ -8,7 +8,6 @@ use App\User;
 use App\Product;
 use App\Http\Requests;
 use Auth;
-use Input;
 
 class PagesController extends Controller
 {
@@ -49,9 +48,7 @@ class PagesController extends Controller
 	}
 	
 	public function storeProduct()
-	{
-		$product = new Product;
-		
+	{	
 		//get the image from the file
 		$img = request()->imagePath;
 		//this is the file path where images are stored in the public folder
@@ -63,6 +60,7 @@ class PagesController extends Controller
 		//move the file to the public/img folder
 		Request()->imagePath->move($filePath, $fileName);
 		//update the database to find the newly uploaded image
+		$product = new Product;
  		$product->imagePath = $filePath.$fileName;
 		$product->productName = request()->productName;
 		$product->productDescription = request()->productDescription;
