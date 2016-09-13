@@ -14,20 +14,19 @@
 				<h2 class="text-center">Add Product Information</h2>
 			</div>
 			<div class="panel-body">
-				<form class="form-horizontal" role="form" method="POST" action="/product/store">
-                    {{ csrf_field() }}
+				
+				{!! Form::open(array('url'=>'product/store','method'=>'POST', 'files'=>true, 'class'=>'form-horizontal')) !!}
                     <p class="text-center lead">Product Details</p>
-					<div class="form-group">
-						<label for="imagePath" class="col-md-4 control-label">Product Image</label>
+                    <div class="form-group">
+	                    {!! Form::label('imagePath', 'Product Image', array('class'=>'col-md-4 control-label')) !!}
 						<div class="col-md-6">
-							<input type="file" id="imagePath" name="imagePath">
+							{!! Form::file('imagePath') !!}
 						</div>
 					</div>
-                    <div class="form-group">
+					<div class="form-group">
                         <label for="productName" class="col-md-4 control-label">Product Name</label>
                         <div class="col-md-6">
                             <input id="productName" type="text" class="form-control" name="productName">
-
                         </div>
                     </div>
                     <div class="form-group">
@@ -58,14 +57,14 @@
                             <input id="productWeight" type="text" class="form-control" name="productWeight">
                         </div>
                     </div>
-                    <div class="form-group">
+					<div class="form-group">
                         <div class="col-md-6 col-md-offset-4">
-                            <button type="submit" class="btn btn-primary">
-                                <i class="glyphicon glyphicon-ok"></i> Add
+                            <button type="submit" class="btn btn-success">
+                                <i class="glyphicon glyphicon-plus"></i> Add
                             </button>
                         </div>
                     </div>
-                </form>
+				{!! Form::close() !!}
 			</div>
 		</div>
 	</div>
