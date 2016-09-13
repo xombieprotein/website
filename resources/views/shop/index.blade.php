@@ -56,6 +56,7 @@
 		    </div>
 	    </div>
 	    <div class="col-md-9 col-md-pull-3 col-lg-7 col-lg-pull-2">
+<!--
 		    <nav class="navbar navbar-inverse">
 			    <div class="container-fluid">
 					<ul class="nav navbar-nav navbar-right">
@@ -73,6 +74,7 @@
 					</ul>
 			    </div>
 		    </nav>
+-->
 		    @foreach ($products->chunk(3) as $productChunk)
 	    	<div class="row">
 	    		@foreach ($productChunk as $product)
