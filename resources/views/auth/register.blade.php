@@ -94,7 +94,7 @@
                             <label for="postalcode" class="col-md-4 control-label">Post Code</label>
 
                             <div class="col-md-6">
-                                <input id="postalcode" type="text" pattern="0-9" class="form-control" name="postalcode">
+                                <input id="postalcode" type="text" class="form-control" name="postalcode">
                         	</div>
                         </div>
                         <div class="form-group">
