@@ -21,7 +21,7 @@
 	</div>
 	@endif
 	<div class="row">
-	    <div class="col-md-3 col-md-push-9 col-lg-3 col-lg-push-8">
+	    <div class="col-md-3 col-md-push-9">
 		    <div class="panel panel-checkout">
 			    @if (Session::has('cart'))
 			    <div class="panel-heading">
@@ -37,7 +37,7 @@
 					<li class="list-group-item list-group-item-success">Total <span class="pull-right"><strong >${{ Session::get('cart')->totalPrice }}</strong></span></li>
 			    </ul>
 			    <div class="panel-footer">
-					<a href="{{ route('product.shoppingCart') }}" class="btn btn-success btn-block"><i class="glyphicon glyphicon-shopping-cart"></i> Checkout</a>
+					<a href="{{ route('product.shoppingCart') }}" class="btn btn-success btn-block" id="cartBtn"><i class="glyphicon glyphicon-shopping-cart"></i> Checkout</a>
 			    </div>
 			    @else
 			    <div class="panel-heading">
@@ -55,7 +55,7 @@
 			    @endif
 		    </div>
 	    </div>
-	    <div class="col-md-9 col-md-pull-3 col-lg-7 col-lg-pull-2">
+	    <div class="col-md-9 col-md-pull-3">
 <!--
 		    <nav class="navbar navbar-inverse">
 			    <div class="container-fluid">
@@ -75,32 +75,23 @@
 			    </div>
 		    </nav>
 -->
-		    @foreach ($products->chunk(3) as $productChunk)
-	    	<div class="row">
-	    		@foreach ($productChunk as $product)
-		    		<div class="col-sm-4">
+	    	<div class="xp-row">
+	    		@foreach ($products as $product)
+		    		<div class="xp-shop-item">
 			    		<div class="panel panel-item">
 							<img src="{{ $product->imagePath }}" class="img-responsive center-block">
 				    		<div class="panel-body">
-					    		<h4 class="text-center">
+					    		<h3 class="clearfix" id="xp-product-name">
 						    		<a href="{{ route('product.show', ['id' => $product->id]) }}">{{{ $product->productName }}}</a>
-					    		</h4>
-					    		<p id="productDescription">
-							    	{{{ $product->productDescription }}}
-						    	</p>
-					    		<a href="{{ route('product.show', ['id' => $product->id]) }}"><span class="glyphicon glyphicon-info-sign"></span>More Information</a>
-								<div class="clearfix" id="priceLabel">
-									<div class="label label-success pull-right">Unit Price: ${{ $product->price }}</div>
-								</div>
-						    	<div class="clearfix">
-							    	<a class="btn btn-success pull-right" id="cartBtn" href="{{ route('product.addToCart', ['id' => $product->id]) }}"><span class="glyphicon glyphicon-shopping-cart"></span> Add To Cart</a>
-						    	</div>
+						    		<div class="pull-right" id="xp-price">${{ $product->price }}</div>
+					    		</h3>
+					    		<a id="moreInfo" href="{{ route('product.show', ['id' => $product->id]) }}"><span class="glyphicon glyphicon-info-sign"></span> More Information</a>
+						    	<a class="btn btn-success btn-block" id="cartBtn" href="{{ route('product.addToCart', ['id' => $product->id]) }}"><span class="glyphicon glyphicon-shopping-cart"></span> Add To Cart</a>
 				    		</div>
 			    		</div>
 		    		</div>
 	    		@endforeach
 	    	</div>
-	    	@endforeach
     	</div>
 	</div>
 	
