@@ -56,7 +56,7 @@ class PagesController extends Controller
 		//get the file extension type of the image
 		$fileExtension = request()->imagePath->getClientOriginalExtension();
 		//name the image with the product name and a random number to ensure unique name
-		$fileName = request()->productName.rand(1,99999).'.'.$fileExtension;
+		$fileName = request()->imagePath->getClientOriginalName();
 		//move the file to the public/img folder
 		Request()->imagePath->move($filePath, $fileName);
 		//update the database to find the newly uploaded image
