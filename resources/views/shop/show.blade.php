@@ -18,11 +18,13 @@
 					</div>
 					<div class="col-sm-8">
 						<div class="panel-body">
-							<h2 class="media-heading">{{ $product->productName }} Protein Powder</h2>
+							<h2 class="media-heading clearfix">
+								{{ $product->productName }}
+								<div class="pull-right" id="xp-price">${{ $product->price }}</div>
+							</h2>
 							<p class="lead">
 								{{ $product->productDescription }}
 							</p>
-							<div class="clearfix"><div class="label label-success pull-left"><h5>Unit Price: ${{ $product->price }}</h5></div></div>
 							<h3>
 								Nutritional Information
 							</h3>
