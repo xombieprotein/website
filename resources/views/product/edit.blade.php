@@ -18,9 +18,10 @@
 					{{ method_field('PATCH') }}
                     {{ csrf_field() }}
                     <p class="text-center lead">Product Details</p>
+                    
                     <div class="form-group">
                         <label for="productName" class="col-md-4 control-label">Product Name</label>
-
+						
                         <div class="col-md-6">
                             <input id="productName" type="text" class="form-control" name="productName" value="{{ $product->productName }}">
 
