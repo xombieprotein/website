@@ -37,7 +37,7 @@
 					<li class="list-group-item list-group-item-success">Total <span class="pull-right"><strong >${{ Session::get('cart')->totalPrice }}</strong></span></li>
 			    </ul>
 			    <div class="panel-footer">
-					<a href="{{ route('product.shoppingCart') }}" class="btn btn-success btn-block" id="cartBtn"><i class="glyphicon glyphicon-shopping-cart"></i> Checkout</a>
+					<a href="{{ route('product.shoppingCart') }}" class="btn btn-success btn-block" id="checkoutBtn"><i class="glyphicon glyphicon-shopping-cart"></i> Checkout</a>
 			    </div>
 			    @else
 			    <div class="panel-heading">

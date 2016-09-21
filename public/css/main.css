@@ -4,12 +4,12 @@ body {background: #252830; height: 100vh;}
 #wrapper {min-height:100%; position:relative;}
 #pageContent {padding-bottom: 31em}
 .navbar-inverse {background: #39393d; border: none;}
-#hero {background-image: url(../img/muscle-1.jpg); background-color: rgba(0,0,0,0.3); background-blend-mode: overlay; background-position: 88% 0; max-height: 100%; background-size: cover; color: white; border-radius: 0; margin-top: -20px; padding: 17% 0;}
+#hero {background-image: url(../img/muscle-1.jpg); background-color: rgba(0,0,0,0.3); background-blend-mode: overlay; background-position: 88% 0; max-height: 100%; background-size: cover; color: white; border-radius: 0; margin-top: -20px; padding: 17% 0; margin-bottom: 0;}
 #hero-heading {margin-top: 0; font-weight: 900;}
 #hero-body {font-size: 1.8em; font-weight: 300}
-#hook, #promo {color: #fff; padding: 4em 0;}
-#hook h1 {font-size: 2.5em; font-weight: 900}
-#promo {padding-bottom: 0;}
+#promo {color: #252830; padding: 4em 0; background: #ffffff;}
+#promo h1:first-of-type {font-size: 2.5em; font-weight: 900; margin-top: 1em; padding-bottom: 0.5em;}
+#promo {padding: 0;}
 #promo h1 {padding-bottom: 1em; margin-bottom: 0;}
 #xpImg-1, #xpImg-2 {background-image: url(../img/proteinbag.jpg); background-size: cover; background-color: rgba(0,0,0,0.5); background-blend-mode: overlay; background-position: 50% 50%; height: 27em; -webkit-transition: all 0.3s ease-in-out; -moz-transition: all 0.3s ease-in-out; -ms-transition: all 0.3s ease-in-out; -o-transition: all 0.3s ease-in-out; transition: all 0.3s ease-in-out;}
 #xpImg-1 h2, #xpImg-2 h2 {color: white; position: absolute; top: 50%; transform: translateY(-50%); left: 0; right: 0;}
@@ -33,8 +33,9 @@ body {background: #252830; height: 100vh;}
 #xp-product-name a {vertical-align: middle;}
 #xp-price {font-size: 1.25em; color: #8B8E59; font-weight: 500;}
 #moreInfo {margin: 1.25em 0; display: block;}
-#cartBtn {border: 3px solid #A2AD7E; border-radius: 0; font-size: 120%; background: transparent; color: #A2AD7E;}
-#cartBtn:hover {background: #A2AD7E; color: white;}
+#cartBtn, #heroCartBtn, #checkoutBtn {border: 3px solid #A2AD7E; border-radius: 0; font-size: 120%; background: transparent; color: #A2AD7E;}
+#heroCartBtn {font-size: 140%; color: white; border-color: white; font-weight: 500; padding: 0.7em 1em;}
+#cartBtn:hover, #heroCartBtn:hover, #checkoutBtn:hover {background: #A2AD7E; color: white; border-color: #A2AD7E;}
 .btn-success {background: #A2AD7E; border-color: #8a9a58;}
 #productOptions a, #productOptions form {margin: 0.3em 0 0 0;}
 footer {width:100%; height:auto; position:absolute; bottom:0; left:0; background: #39393d; padding: 0; margin-top: 2em; color: white;}
@@ -45,6 +46,7 @@ footer h4 {color: #666666; padding: 0.6em;}
 #footerLeft, #footerCenter, #footerRight {min-height: 14.642857143em;}
 @media (min-width: 693px) {
 	.xp-shop-item {flex: 0 1 50%; padding: 0 0.5em;}
+	#checkoutBtn {max-width: 22.2857142857em; margin: 0 auto;}
 }
 @media (min-width: 768px) {
 	#pageContent {padding-bottom: 25em;}
