@@ -65,19 +65,19 @@
 						    	</ul>
 						    	<h3 class="lead text-center">User Credentials</h3>
 					        	<div class="row">
-						        	<div class="col-md-4 text-right">
+						        	<div class="col-md-4 text-right overide">
 						        		<h4><small>NAME</small></h4>
 						        	</div>
 						        	<div class="col-md-6">
 										<h4>{{ Auth::user()->name }}</h4>
 									</div>
-									<div class="col-md-4 text-right">
+									<div class="col-md-4 text-right overide">
 						        		<h4><small>EMAIL</small></h4>
 						        	</div>
 						        	<div class="col-md-6">
 										<h4>{{ Auth::user()->email }}</h4>
 									</div>
-									<div class="col-md-4 text-right">
+									<div class="col-md-4 text-right overide">
 						        		<h4><small>PASSWORD</small></h4>
 						        	</div>
 						        	<div class="col-md-6">
@@ -87,19 +87,19 @@
 					        	<hr>
 					        	<h3 class="lead text-center">Shipping Details</h3>
 					        	<div class="row">
-						        	<div class="col-md-4 text-right">
+						        	<div class="col-md-4 text-right overide">
 						        		<h4><small>ADDRESS</small></h4>
 						        	</div>
 						        	<div class="col-md-6">
 										<h4>{{ Auth::user()->address }}</h4>
 									</div>
-									<div class="col-md-4 text-right">
+									<div class="col-md-4 text-right overide">
 						        		<h4><small>SUBURB</small></h4>
 						        	</div>
 						        	<div class="col-md-6">
 										<h4>{{ Auth::user()->city }}, {{ Auth::user()->state }}</h4>
 									</div>
-									<div class="col-md-4 text-right">
+									<div class="col-md-4 text-right overide">
 						        		<h4><small>POST CODE</small></h4>
 						        	</div>
 						        	<div class="col-md-6">
@@ -114,7 +114,7 @@
 							        	You can register with the same email again in the future, but you will not recover
 							        	your purchase history.
 						        	</p>
-						        	<div class="col-md-4 text-right"><h4><small >DELETE ACCOUNT</small></h4></div>
+						        	<div class="col-md-4 text-right overide"><h4><small >DELETE ACCOUNT</small></h4></div>
 							        <div class="col-md-6">
 								        <button class="btn btn-danger" data-toggle="modal" data-target="#deleteModal">
 								        	<i class="glyphicon glyphicon-trash"></i> Delete Account
