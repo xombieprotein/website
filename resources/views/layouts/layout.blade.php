@@ -27,7 +27,7 @@
 		    FB.init({
 		      appId      : '824932344275716',
 		      xfbml      : true,
-		      version    : 'v2.6'
+		      version    : 'v2.8'
 		    });
 		  };
 
@@ -39,6 +39,7 @@
 		     fjs.parentNode.insertBefore(js, fjs);
 		   }(document, 'script', 'facebook-jssdk'));
 		</script>
+		
 		<div id="wrapper">
 			<nav class="navbar navbar-inverse navbar-static-top">
 		      <div class="container-fluid">
