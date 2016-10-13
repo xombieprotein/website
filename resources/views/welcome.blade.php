@@ -29,8 +29,10 @@
 @endsection
 @section('content')
 	<div class="row" id="promo">
-		<h1 class="text-center text-uppercase">Get the best protein for your goals.</h1>
-		<h1 class="text-center text-uppercase" >See our Best Sellers from the store.</h1>
+		<div id="promoText">
+			<h1 class="text-center text-uppercase">Get the best protein for your goals.</h1>
+			<h1 class="text-center text-uppercase" >See our Best Sellers from the store.</h1>
+		</div>
 		<div class="col-sm-6" id="xpImg-1">
 			<h2 class="text-center">Chocolate</h2>
 		</div>
