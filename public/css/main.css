@@ -11,7 +11,7 @@ body {background: #252830; height: 100vh;}
 #promo h1:first-of-type {font-size: 2.5em; font-weight: 900; margin-top: 1em; padding-bottom: 0.5em;}
 #promo {padding: 0;}
 #promo h1 {padding-bottom: 1em; margin-bottom: 0;}
-#promoText {padding: 3em 0; color: blue;}
+#promoText {padding: 3em 0;}
 #xpImg-1, #xpImg-2 {background-image: url(../img/proteinbag.jpg); background-size: cover; background-color: rgba(0,0,0,0.5); background-blend-mode: overlay; background-position: 50% 50%; height: 27em; -webkit-transition: all 0.3s ease-in-out; -moz-transition: all 0.3s ease-in-out; -ms-transition: all 0.3s ease-in-out; -o-transition: all 0.3s ease-in-out; transition: all 0.3s ease-in-out;}
 #xpImg-1 h2, #xpImg-2 h2 {color: white; position: absolute; top: 50%; transform: translateY(-50%); left: 0; right: 0;}
 #xpImg-1:hover {background-color: rgba(61, 32, 17, 0.8);}
