@@ -21,7 +21,7 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-sm-8 col-sm-offset-2">
+				<div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">
 					<div class="panel panel-default">
 						<div class="panel-heading">
 							<h4>Shopping Cart</h4>
@@ -73,7 +73,7 @@
 			</div>
 		@else
 			<div class="row">
-				<div class="col-sm-8 col-sm-offset-2">
+				<div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">
 					<div class="panel panel-default">
 						<div class="panel-body">
 							<span id="emptyCartIcon"><i class="glyphicon glyphicon-shopping-cart text-center"></i></span>
@@ -94,7 +94,7 @@
 	@else
 		@if(Session::has('cart'))
 			<div class="row">
-				<div class="col-sm-8 col-sm-offset-2">
+				<div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">
 					<div class="panel panel-default">
 						<div class="panel-heading">
 							<h4>Shopping Cart</h4>
@@ -146,7 +146,7 @@
 			</div>
 		@else
 			<div class="row">
-				<div class="col-sm-8 col-sm-offset-2">
+				<div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">
 					<div class="panel panel-default">
 						<div class="panel-body">
 							<span id="emptyCartIcon"><i class="glyphicon glyphicon-shopping-cart text-center"></i></span>
