@@ -67,3 +67,6 @@ Route::delete('product/delete/{id}', 'PagesController@deleteProduct');
 Route::get('protected', ['middleware' => ['auth', 'admin'], function() {
     return "this page requires that you be logged in and an Admin";
 }]);
+
+Route::get('/redirect', 'SocialAuthController@redirect');
+Route::get('/callback', 'SocialAuthController@callback');

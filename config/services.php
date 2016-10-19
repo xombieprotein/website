@@ -38,5 +38,11 @@ return [
         'key' => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
     ],
+	
+	'facebook' => [
+		'client_id' => '824932344275716',
+		'client_secret' => '8451c2076031cc215f1905787e2caf95',
+		'redirect' => 'https://xombieprotein.azurewebsites.net/callback',
+	],
 
 ];
