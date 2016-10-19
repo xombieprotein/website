@@ -104,6 +104,10 @@
                                 </button>
                             </div>
                         </div>
+						<div class="formgroup">
+							<label for="social logins" class="col-md-4 control-label">Or Use Social Login</label></br>
+							<a href="redirect"><img src="img/facebooklogin.png"/></a>
+						</div>
                     </form>
                 </div>
             </div>
