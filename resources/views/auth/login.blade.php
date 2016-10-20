@@ -57,10 +57,16 @@
                                 <a class="btn btn-link" href="{{ url('/password/reset') }}">Forgot Your Password?</a>
                             </div>
                         </div>
-						<div class="formgroup">
-							<label for="social logins" class="col-md-4 control-label">Or Use Social Login</label></br>
-							<a href="redirect"><img src="img/facebooklogin.png"/></a>
-						</div>
+						<!--
+							Facebook Login
+	                        Removed from functioning code since it did not function properly
+	                        Kept for posterity
+                        
+							<div class="formgroup">
+								<label for="social logins" class="col-md-4 control-label">Or Use Social Login</label></br>
+								<a href="redirect"><img src="img/facebooklogin.png"/></a>
+							</div>
+						-->
                     </form>
                 </div>
             </div>

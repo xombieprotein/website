@@ -11,10 +11,22 @@ use Auth;
 
 class PagesController extends Controller
 {
+	// Loads the homepage
 	public function home()
 	{
 		return view('welcome');
 	}
+	
+	/**
+	*	Retrieves all products from the product
+	*	database for admin product management.
+	*
+	*	Retrieves user orders, unserializes the
+	*	data, then returns it for Purchase History.
+	*
+	*	Loads profile of the logged in user with
+	*	purchase orders and product catalog for admins
+	*/
 	public function profile()
 	{
 		$products = Product::all();
@@ -25,28 +37,46 @@ class PagesController extends Controller
 		});
 		return view('user.profile', compact('orders', 'products'));
 	}
+	/**
+	*	Finds the id of the current logged in user from the 
+	*	User table and passes the information stored in that 
+	*	id to the edit page.
+	*/
+	
 	public function editProfile($id)
     {
     	$user = User::find($id);
     	return view('user.edit', ['user' => $user]);
     }
     
+	/**
+	*	Takes the request from the Edit Profile page
+	*	and passes the new information into the User Database.
+	*	Redirects back to the user profile.
+	*/
     public function updateProfile(Request $request, User $id) {
 	    $id->update($request->all());
 	    return redirect()->action('PagesController@profile');
     }
-	
+    
+	// 	Finds and erases the logged in user id and returns to the homepage
 	public function deleteProfile($id)
 	{
 		User::find($id)->delete();
 		return view('welcome');
 	}
-
+	
+	// 	Loads the Administrator Add Product page
 		public function addProduct()
 	{
 		return view('product.add');
 	}
 	
+	/**
+	*	Moves the uploaded image to the img/ directory
+	*	then creates a new product in the Products database.
+	*	Once saved redirects to the profile page
+	*/
 	public function storeProduct()
 	{	
 		//get the image from the file
@@ -70,19 +100,34 @@ class PagesController extends Controller
 		$product->save();
 		return redirect()->action('PagesController@profile');
 	}
-
+	
+	/**
+	*	Finds the id of the selected product from the 
+	*	product management table and returns the edit product page
+	*/
 	public function editProduct($id)
     {
     	$product = Product::find($id);
     	return View('product.edit', ['product' => $product]);
     }
     
+    /**
+	*	Takes the request from the Edit Product page
+	*	and passes the new information into the Product 
+	*	Database.
+	*	
+	*	Redirects back to the user profile.
+	*/
     public function updateProduct(Request $request, Product $id)
     {
     	$id->update($request->all());
 		return redirect()->action('PagesController@profile');
     }
     
+	/**
+    *	Finds and erases the selected product from the 
+	*	product table and returns to the Profile page
+	*/
     public function deleteProduct($id) {
  		$product = Product::find($id);
  		$product->delete();
